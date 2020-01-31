@@ -1,0 +1,11 @@
+<h1>Welcome!</h1>
+
+<h2>Here are some recipes to check out</h2>
+
+<ol>
+    {% for list in recipe_list %}
+        <li>   
+            <a href="/recipe/{{list.id}}">{{ list.title }}</a>
+        </li> 
+    {% endfor %}
+</ol>

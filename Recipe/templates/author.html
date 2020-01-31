@@ -1,0 +1,11 @@
+<h2><b>{{ auth.name }}'s Page</b></h2>
+<h3>{{ auth.bio }}</h3>
+
+<h3>Here's what {{auth.name}} has been making!</h3>
+<ol>
+    {% for foo in recipe %}
+        <li>
+            <a href="/recipe/{{foo.id}}">{{ foo.title }}</a>
+        </li>
+    {% endfor %}
+</ol>
