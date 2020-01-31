@@ -1,11 +1,29 @@
-<h1>Welcome!</h1>
+<!DOCTYPE html>
+<html lang="en">
 
-<h2>Here are some recipes to check out</h2>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Document</title>
+    </head>
 
-<ol>
-    {% for list in recipe_list %}
-        <li>   
-            <a href="/recipe/{{list.id}}">{{ list.title }}</a>
-        </li> 
-    {% endfor %}
-</ol>
+    <body style="text-align: center;">
+        <h1>Welcome!</h1>
+        <br>
+        <h2>Here's some recipes to check out</h2>
+
+        {% for list in recipe_list %}
+
+        <ul style="list-style-position:inside; position: relative; left: -30px;">
+            <li>
+                <a href="/recipe/{{list.id}}">{{ list.title }}</a>
+            </li>
+        </ul>
+
+        {% endfor %}
+
+        </div>
+    </body>
+
+</html>

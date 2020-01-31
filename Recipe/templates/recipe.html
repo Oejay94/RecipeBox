@@ -1,7 +1,24 @@
-<h2>Recipe Directions for {{ data.title }} By <a href="/author/{{data.id}}"> {{ data.author }}</a></h2>
-<br>
+<!DOCTYPE html>
+<html lang="en">
 
-<h3>Time to make: {{ data.time_required }}</h3>
-<br>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Document</title>
+    </head>
 
-<p>{{ data.instructions|linebreaksbr }} </p>
+    <body>
+        <h1 style="text-align: center;"> Recipe Directions for {{ data.title }} by
+            <a href="/author/{{data.author.id}}"> {{ data.author }}</a>
+        </h1>
+        <br>
+        <h2>Discription</h2>{{ data.description|linebreaksbr }}
+        <h2>Time to make</h2>{{ data.time_required }}
+        <br>
+        <h2>Directions</h2>
+        <p>{{ data.instructions|linebreaksbr }} </p>
+
+    </body>
+
+</html>

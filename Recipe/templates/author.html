@@ -1,11 +1,27 @@
-<h2><b>{{ auth.name }}'s Page</b></h2>
-<h3>{{ auth.bio }}</h3>
+<!DOCTYPE html>
+<html lang="en">
 
-<h3>Here's what {{auth.name}} has been making!</h3>
-<ol>
-    {% for foo in recipe %}
-        <li>
-            <a href="/recipe/{{foo.id}}">{{ foo.title }}</a>
-        </li>
-    {% endfor %}
-</ol>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Document</title>
+    </head>
+
+    <body style="text-align: center;">
+        <h1>{{ auth.name }}'s Page</h1>
+        <br>
+        <h2>{{ auth.name }}'s Bio</h2>
+        <p>{{ auth.bio }}</p>
+        <br>
+        <h2>Here's what {{auth.name}} has been making!</h2>
+        <ol style="list-style-position:inside;">
+            {% for foo in recipe %}
+            <li>
+                <a href="/recipe/{{foo.id}}">{{ foo.title }}</a>
+            </li>
+            {% endfor %}
+        </ol>
+    </body>
+
+</html>
