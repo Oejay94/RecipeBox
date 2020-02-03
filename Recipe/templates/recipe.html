@@ -8,7 +8,7 @@
         <title>Document</title>
     </head>
 
-    <body>
+    <body style="background-color:floralwhite">
         <h1 style="text-align: center;"> Recipe Directions for {{ data.title }} by
             <a href="/author/{{data.author.id}}"> {{ data.author }}</a>
         </h1>
@@ -19,17 +19,27 @@
         <h2>Directions</h2>
         <p>{{ data.instructions|linebreaksbr }} </p>
         <br>
-        <button style="background-color: black;">
-            <a href="/addrecipe/" style="color: white;">
-                Add a Recipe!
-            </a>
-        </button>
+        <div class="buttons" style="text-align: center;">
+            <div id="top-buttons" style="position: relative; left: 20px;">
+                <button style="background-color: black; font-size: inherit;">
+                    <a href="/addrecipe/" style="color: white;">
+                        Add a Recipe!
+                    </a>
+                </button>
 
-        <button style="background-color: black;">
-            <a href="/addauthor/" style="color: white;">
-                Add yourself as an Author!
-            </a>
-        </button>
+                <button style="background-color: black; font-size: inherit;">
+                    <a href="/addauthor/" style="color: white;">
+                        Add yourself as an Author!
+                    </a>
+                </button>
+            </div>
+            <br>
+            <button style="background-color: black; font-size: inherit; position: relative; left: -10px;">
+                <a href="/" style="color: white;">
+                    Home
+                </a>
+            </button>
+        </div>
     </body>
 
 </html>

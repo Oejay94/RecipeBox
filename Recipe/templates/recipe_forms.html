@@ -8,11 +8,15 @@
         <title>Document</title>
     </head>
 
-    <body>
-        <form action="" method="post">
+    <body style="background-color:floralwhite; text-align: center;">
+        <h1>
+            Tell us about your recipe!
+        </h1>
+        <form action="" method="post" style="position: relative; top: 200px; left: -40px;">
             {% csrf_token %}
             {{ form.as_p }}
             <input type="submit" value="Submit">
+        </form>
     </body>
 
 </html>
