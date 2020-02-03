@@ -8,11 +8,13 @@
         <title>Document</title>
     </head>
 
-    <body style="background-color:floralwhite; text-align: center;">
+    <body>
+        {% load static %}
+        <link rel="stylesheet" type="text/css" href="{% static 'recipe_forms/style.css' %}" />
         <h1>
             Tell us about your recipe!
         </h1>
-        <form action="" method="post" style="position: relative; top: 200px; left: -40px;">
+        <form action="" method="post">
             {% csrf_token %}
             {{ form.as_p }}
             <input type="submit" value="Submit">

@@ -8,14 +8,16 @@
         <title>Document</title>
     </head>
 
-    <body style="text-align: center; background-color:floralwhite">
+    <body>
+        {% load static %}
+        <link rel="stylesheet" type="text/css" href="{% static 'author/style.css' %}" />
         <h1>{{ auth.name }}'s Page</h1>
         <br>
         <h2>{{ auth.name }}'s Bio</h2>
         <p>{{ auth.bio }}</p>
         <br>
         <h2>Here's what {{auth.name}} has been making!</h2>
-        <ol style="list-style-position:inside;">
+        <ol>
             {% for foo in recipe %}
             <li>
                 <a href="/recipe/{{foo.id}}">{{ foo.title }}</a>
@@ -23,23 +25,23 @@
             {% endfor %}
         </ol>
         <br>
-        <div class="buttons" style="text-align: center;">
-            <div id="top-buttons" style="position: relative; left: 20px;">
-                <button style="background-color: black; font-size: inherit;">
-                    <a href="/addrecipe/" style="color: white;">
+        <div class="buttons">
+            <div id="top-buttons">
+                <button>
+                    <a href="/addrecipe/">
                         Add a Recipe!
                     </a>
                 </button>
 
-                <button style="background-color: black; font-size: inherit;">
-                    <a href="/addauthor/" style="color: white;">
+                <button>
+                    <a href="/addauthor/">
                         Add yourself as an Author!
                     </a>
                 </button>
             </div>
             <br>
-            <button style="background-color: black; font-size: inherit; position: relative; left: -10px;">
-                <a href="/" style="color: white;">
+            <button>
+                <a href="/">
                     Home
                 </a>
             </button>

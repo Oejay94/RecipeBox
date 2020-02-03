@@ -8,8 +8,10 @@
         <title>Document</title>
     </head>
 
-    <body style="background-color:floralwhite">
-        <h1 style="text-align: center;"> Recipe Directions for {{ data.title }} by
+    <body>
+        {% load static %}
+        <link rel="stylesheet" type="text/css" href="{% static 'recipe/style.css'%}" />
+        <h1> Recipe Directions for {{ data.title }} by
             <a href="/author/{{data.author.id}}"> {{ data.author }}</a>
         </h1>
         <br>
@@ -19,23 +21,23 @@
         <h2>Directions</h2>
         <p>{{ data.instructions|linebreaksbr }} </p>
         <br>
-        <div class="buttons" style="text-align: center;">
-            <div id="top-buttons" style="position: relative; left: 20px;">
-                <button style="background-color: black; font-size: inherit;">
-                    <a href="/addrecipe/" style="color: white;">
+        <div class="buttons">
+            <div id="top-buttons">
+                <button>
+                    <a href="/addrecipe/">
                         Add a Recipe!
                     </a>
                 </button>
 
-                <button style="background-color: black; font-size: inherit;">
-                    <a href="/addauthor/" style="color: white;">
+                <button>
+                    <a href="/addauthor/">
                         Add yourself as an Author!
                     </a>
                 </button>
             </div>
             <br>
-            <button style="background-color: black; font-size: inherit; position: relative; left: -10px;">
-                <a href="/" style="color: white;">
+            <button>
+                <a href="/">
                     Home
                 </a>
             </button>

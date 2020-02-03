@@ -1,0 +1,9 @@
+body {
+    background-color:floralwhite; text-align: center;
+}
+
+form {
+    position: relative; 
+    top: 200px; 
+    left: -40px;
+}

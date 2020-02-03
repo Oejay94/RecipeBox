@@ -8,14 +8,16 @@
         <title>Document</title>
     </head>
 
-    <body style="text-align: center; background-color:floralwhite">
+    <body>
+        {% load static %}
+        <link rel="stylesheet" type="text/css" href="{% static 'main/style.css' %}" />
         <h1>Welcome!</h1>
         <br>
         <h2>Here's some recipes to check out</h2>
 
         {% for list in recipe_list %}
 
-        <ul style="list-style-position:inside; position: relative; left: -30px;">
+        <ul>
             <li>
                 <a href="/recipe/{{list.id}}">{{ list.title }}</a>
             </li>
@@ -23,14 +25,14 @@
 
         {% endfor %}
         <br>
-        <button style="background-color: black; font-size: inherit;">
-            <a href="/addrecipe/" style="color: white;">
+        <button>
+            <a href="/addrecipe/">
                 Add a Recipe!
             </a>
         </button>
 
-        <button style="background-color: black; font-size: inherit;">
-            <a href="/addauthor/" style="color: white;">
+        <button>
+            <a href="/addauthor/">
                 Add yourself as an Author!
             </a>
         </button>
