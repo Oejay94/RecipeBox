@@ -5,7 +5,9 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>Document</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+            integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <title>Recipe Page</title>
     </head>
 
     <body>
@@ -15,33 +17,40 @@
             <a href="/author/{{data.author.id}}"> {{ data.author }}</a>
         </h1>
         <br>
+        <br>
         <h2>Discription</h2>{{ data.description|linebreaksbr }}
+        <br>
+        <br>
         <h2>Time to make</h2>{{ data.time_required }}
         <br>
-        <h2>Directions</h2>
-        <p>{{ data.instructions|linebreaksbr }} </p>
         <br>
-        <div class="buttons">
-            <div id="top-buttons">
-                <button>
-                    <a href="/addrecipe/">
-                        Add a Recipe!
-                    </a>
-                </button>
+        <h2>Directions</h2>
+        <p>{{ data.instructions|linebreaksbr}} </p>
+        <br>
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <div class="btn-group" role="toolbar">
+                    <div class="btn-group mr-2" role="group" aria-label="1st group">
+                        <button type="button" class="btn btn-success">
+                            <a href="/" class="badge badge-success">
+                                Home
+                            </a>
+                    </div>
+                    <div class="btn-group mr-2" role="group" aria-label="2nd group">
+                        <button type="button" class="btn btn-primary">
+                            <a href="/addrecipe/" class="badge badge-primary">
+                                Add a Recipe!
+                            </a>
+                        </button>
 
-                <button>
-                    <a href="/addauthor/">
-                        Add yourself as an Author!
-                    </a>
-                </button>
+                        <button type="button" class="btn btn-secondary">
+                            <a href="/addauthor/" class="badge badge-secondary">
+                                Add yourself as an Author!
+                            </a>
+                        </button>
+                    </div>
+                </div>
             </div>
-            <br>
-            <button>
-                <a href="/">
-                    Home
-                </a>
-            </button>
-        </div>
     </body>
 
 </html>

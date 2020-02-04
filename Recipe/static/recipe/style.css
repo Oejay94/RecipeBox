@@ -5,20 +5,3 @@ body {
 h1 {
     text-align: center;
 }
-
-.buttons {
-    text-align: center;
-}
-
-.buttons #top-buttons {
-    position: relative; left: 20px;
-}
-
-button {
-    background-color: black; 
-    font-size: inherit;
-}
-
-button a {
-    color: white;
-}

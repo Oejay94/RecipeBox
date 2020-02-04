@@ -1,9 +1,24 @@
 body {
-    background-color:floralwhite; text-align: center;
+    background-color:floralwhite; 
+    text-align: center;
 }
 
-form {
-    position: relative; 
-    top: 200px; 
-    left: -40px;
+#div_id_name{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 180px;
+    margin-right: 180px;
+}
+
+#div_id_bio{
+    margin-bottom: 50px;
+    margin-left: -100px;
+    margin-right: -100px;
+}
+
+form{
+    margin-top: 100px !important;
+    margin-bottom: 100px !important;
+    margin-left: 800px !important;
+    margin-right: 800px !important;
 }
