@@ -3,16 +3,7 @@ body {
     background-color:floralwhite
 }
 
-ul {
-    list-style-position:inside; 
-    position: relative; left: -30px;  
+ul.list-group {
+    margin-left: 400px;
+    margin-right: 400px;
 }
-
-/* button {
-    background-color: black; 
-    font-size: inherit;
-}
-
-button a {
-    color: white;    
-} */

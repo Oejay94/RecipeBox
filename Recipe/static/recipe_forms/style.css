@@ -6,22 +6,26 @@ body {
 #div_id_title{
     margin-top: 20px !important;
     margin-bottom: 20px !important;
-    margin-left: 150px;
-    margin-right: 150px;
+    margin-left: 250px;
+    margin-right: 250px;
 }
 
 #div_id_description{
     margin-bottom: 30px !important;
+    margin-left: 150px;
+    margin-right: 150px;
 }
 
 #div_id_instructions{
     margin-bottom: 30px !important;
+    margin-left: 150px;
+    margin-right: 150px;
 }
 
 #div_id_author {
     margin-bottom: 30px !important;
-    margin-left: 150px;
-    margin-right: 150px;
+    margin-left: 250px;
+    margin-right: 250px;
 }
  button{
      margin-bottom: 30px !important;
@@ -31,6 +35,6 @@ body {
  form{
      margin-top: 100px;
      margin-bottom: 100px;
-     margin-left: 800px;
-     margin-right: 800px;
+     margin-left: 250px;
+     margin-right: 250px;
  }

@@ -12,13 +12,13 @@ body {
 
 #div_id_bio{
     margin-bottom: 50px;
-    margin-left: -100px;
-    margin-right: -100px;
+    margin-left: 150px;
+    margin-right: 150px;
 }
 
 form{
     margin-top: 100px !important;
     margin-bottom: 100px !important;
-    margin-left: 800px !important;
-    margin-right: 800px !important;
+    margin-left: 300px !important;
+    margin-right: 300px !important;
 }
