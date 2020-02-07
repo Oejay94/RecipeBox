@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Sign Up Page</title>
+    </head>
+
+    <body>
+        {% load static %}
+        <link rel="stylesheet" type="text/css" href="{% static 'signup_form/style.css' %}" />
+        <h1>Sign up to add recipes!</h1>
+        <form action="" method="post">
+            {% csrf_token %}
+            {% for field in form %}
+            <p>
+                {{ field.label_tag }}
+                {{ field }}
+                {% for error in field_error %}
+                <p style="color: red;">{{ error }}</p>
+                {% endfor %}
+            </p>
+            {% endfor %}
+            <button type="submit">Sign Up</button>
+        </form>
+    </body>
+
+</html>

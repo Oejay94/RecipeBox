@@ -14,22 +14,32 @@
         {% load crispy_forms_tags %}
         {% load static %}
         <link rel="stylesheet" type="text/css" href="{% static 'author_forms/style.css' %}" />
+        {% if request.user.is_staff %}
         <h1>
-            Tell us about yourself!
+            Tell us about the Author!
         </h1>
         <form action="" method="post">
+
             {% csrf_token %}
             {{ form|crispy }}
+
+            <div class="btn-group" role="group">
+                <button type="submit" class="btn btn-primary">
+                    Submit
+                </button>
         </form>
-        <div class="btn-group" role="group">
-            <button type="submit" class="btn btn-primary">
-                Submit
-            </button>
-            <button type="button" class="btn btn-success">
-                <a href="/" class="btn badge-success">
-                    Home
-                </a>
-            </button>
+
+        {% else %}
+
+        <h2>You do not have the required permissions for this page. Sorry :( </h2>
+
+        {% endif %}
+
+        <button type="button" class="btn btn-success">
+            <a href="/" class="btn badge-success">
+                Home
+            </a>
+        </button>
         </div>
     </body>
 
