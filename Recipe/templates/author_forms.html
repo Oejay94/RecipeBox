@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+            integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <title>Add Author</title>
+    </head>
+
+    <body>
+        {% load crispy_forms_tags %}
+        {% load static %}
+        <link rel="stylesheet" type="text/css" href="{% static 'author_forms/style.css' %}" />
+        {% if request.user.is_staff %}
+        <h1>
+            Tell us about the Author!
+        </h1>
+        <form action="" method="post">
+
+            {% csrf_token %}
+            {{ form|crispy }}
+
+            <div class="btn-group" role="group">
+                <button type="submit" class="btn btn-primary">
+                    Submit
+                </button>
+        </form>
+
+        {% else %}
+
+        <h2>You do not have the required permissions for this page. Sorry :( </h2>
+
+        {% endif %}
+
+        <button type="button" class="btn btn-success">
+            <a href="/" class="btn badge-success">
+                Home
+            </a>
+        </button>
+        </div>
+    </body>
+
+</html>

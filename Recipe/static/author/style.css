@@ -1,0 +1,25 @@
+body {
+    text-align: center; 
+    background-color:floralwhite
+}
+
+ol {
+    list-style-position:inside;
+}
+
+/* .buttons {
+    text-align: center;
+}
+
+.buttons #top-buttons {
+    position: relative; left: 20px;
+}
+
+button {
+    background-color: black; 
+    font-size: inherit;
+}
+
+button a {
+    color: white;
+} */

@@ -1,0 +1,9 @@
+body {
+    text-align: center; 
+    background-color:floralwhite
+}
+
+ul.list-group {
+    margin-left: 400px;
+    margin-right: 400px;
+}

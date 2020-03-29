@@ -5,25 +5,52 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>Document</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+            integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <title>Home Page</title>
     </head>
 
-    <body style="text-align: center;">
+    <body>
+        {% load static %}
+        <link rel="stylesheet" type="text/css" href="{% static 'main/style.css' %}" />
         <h1>Welcome!</h1>
         <br>
         <h2>Here's some recipes to check out</h2>
+        <br>
 
         {% for list in recipe_list %}
-
-        <ul style="list-style-position:inside; position: relative; left: -30px;">
-            <li>
+        <ul class="list-group">
+            <li class="list-group-item">
                 <a href="/recipe/{{list.id}}">{{ list.title }}</a>
             </li>
         </ul>
 
         {% endfor %}
+        <br>
+        <div class="btn-group" role="group">
+            <button type="button" class="btn btn-primary">
+                <a href="/addrecipe/" class="badge badge-primary">
+                    Add a Recipe!
+                </a>
+            </button>
 
+            <button type="button" class="btn btn-secondary">
+                <a href="/addauthor/" class="badge badge-secondary">
+                    Add an Author!
+                </a>
+            </button>
+
+            <button type="button" class="btn btn-danger">
+                <a href="/logout/" class="badge badge-danger">
+                    Log Out
+                </a>
+            </button>
         </div>
+        <button type="button" class="btn btn-info">
+            <a href="/signup/" class="badge badge-info">
+                Sign up to add a recipe!
+            </a>
+        </button>
     </body>
 
 </html>

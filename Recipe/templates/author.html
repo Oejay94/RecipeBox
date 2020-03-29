@@ -5,23 +5,50 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>Document</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+            integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <title>Author's Page</title>
     </head>
 
-    <body style="text-align: center;">
+    <body>
+        {% load static %}
+        <link rel="stylesheet" type="text/css" href="{% static 'author/style.css' %}" />
         <h1>{{ auth.name }}'s Page</h1>
         <br>
         <h2>{{ auth.name }}'s Bio</h2>
         <p>{{ auth.bio }}</p>
         <br>
         <h2>Here's what {{auth.name}} has been making!</h2>
-        <ol style="list-style-position:inside;">
+        <ol class="list-group">
             {% for foo in recipe %}
-            <li>
+            <li class="list-group-item">
                 <a href="/recipe/{{foo.id}}">{{ foo.title }}</a>
             </li>
             {% endfor %}
         </ol>
+        <br>
+        <div class="btn-group" role="toolbar">
+            <div class="btn-group mr-2" role="group" aria-label="1st group">
+                <button type="button" class="btn btn-success">
+                    <a href="/" class="badge badge-success">
+                        Home
+                    </a>
+            </div>
+            <div class="btn-group mr-2" role="group" aria-label="2nd group">
+                <button type="button" class="btn btn-primary">
+                    <a href="/addrecipe/" class="badge badge-primary">
+                        Add a Recipe!
+                    </a>
+                </button>
+
+                <button type="button" class="btn btn-secondary">
+                    <a href="/addauthor/" class="badge badge-secondary">
+                        Add yourself as an Author!
+                    </a>
+                </button>
+            </div>
+            <br>
+        </div>
     </body>
 
 </html>
