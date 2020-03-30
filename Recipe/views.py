@@ -26,9 +26,10 @@ def author(request, id):
 @login_required()
 def add_recipe(request):
     html = "recipe_forms.html"
+    user = request.user
 
     if request.method == "POST":
-        form = AddRecipe(request.POST)
+        form = AddRecipe(None, request.POST)
         if form.is_valid():
             data = form.cleaned_data
             Recipe.objects.create(
@@ -39,7 +40,7 @@ def add_recipe(request):
             )
             return HttpResponseRedirect(reverse("main"))
     else:
-        form = AddRecipe(request.user)
+        form = AddRecipe(user)
 
     return render(request, html, {'form': form})
 
@@ -111,4 +112,4 @@ def login_view(request):
 
 def logout_view(request):
     logout(request)
-    return HttpResponseRedirect(request.GET.get('next', '/'))
+    return HttpResponseRedirect(request.GET.get('next', '/login/'))
